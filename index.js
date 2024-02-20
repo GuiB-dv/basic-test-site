@@ -5,7 +5,7 @@ const port = 8888;
 
 const server = http.createServer((req, res) => {
     // call index.html
-    if (req.url === '/') {
+    if (req.url === '/' || '') {
         fs.readFile('./pages/index.html', (err, data) => {
             if(err){
                 res.writeHead(500, {'Content-type': 'text/html'});
